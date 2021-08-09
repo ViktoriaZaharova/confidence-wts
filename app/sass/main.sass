@@ -1,0 +1,808 @@
+@import "fonts"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: normal
+	font-family: $default-font
+	font-weight: normal
+	background: #fff
+	color: #0C1B36
+
+html, body
+	overflow-x: hidden
+	height: auto
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+a
+	display: block
+	text-decoration: none
+	transition: .3s ease
+	outline: none
+
+	&:hover, &:focus
+		text-decoration: none
+
+input, textarea, select
+	outline: none
+	box-shadow: none
+	appearance: none
+	padding: 0 8px 0 14px
+	box-sizing: border-box
+	font-family: $default-font
+	font-size: 18px
+	background: #fff
+	width: 100%
+
+input
+	border: 1px solid #787878
+		radius: 8px	
+	height: 40px
+
+button
+	border: none
+	padding: 0
+	cursor: pointer
+
+
+.label-text
+	color: #0C1B36
+	font-size: 20px
+	font-weight: 500
+	font-family: $font
+
+label
+	display: block
+	margin: 0 0 16px	
+
+.label-group
+	input
+		width: 142px
+		margin: 0 7px
+
+.form
+	max-width: 368px
+	width: 100%
+	margin: 0 auto
+	a
+		width: fit-content
+		margin: 0 auto
+	button, .btn
+		max-width: none	
+		margin: 23px auto 0	
+		width: 100%
+
+.container
+	padding: 0 10px
+	box-sizing: border-box
+	margin: 0 auto
+	width: 100%
+	max-width: 1800px
+	display: flex
+	flex-wrap: wrap
+	z-index: 1
+	position: relative
+
+.btn
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	height: 42px
+	border: none
+		radius: 4px
+	font-size: 18px
+	font-weight: 500
+	width: 100%
+	max-width: 240px
+	border-radius: 4px
+
+.btn-accent
+	background: $btn-accent
+	color: #fff
+	&:hover
+		background: linear-gradient(180deg, #FED580 0%, #F6B52E 100%)
+		box-shadow: 0px 4px 8px rgba(180, 128, 19, 0.32)
+		color: #fff
+	&:focus
+		background: linear-gradient(180deg, #DE9D15 0%, #FFBF3C 100%)
+		box-shadow: none
+		color: #fff
+
+.btn-green
+	background: $accent
+	color: #fff
+	font-family: $font
+	font-size: 20px
+	&:hover
+		background: linear-gradient(180deg, #37BE5D 0%, #058F2C 100%)
+		color: #fff
+		box-shadow: 0px 4px 6px rgba(9, 105, 36, 0.32)
+	&:focus
+		color: #fff
+		background: linear-gradient(180deg, #067425 0%, #058F2C 100%)
+		box-shadow: none
+
+.btn-menu
+	display: none
+
+.list-lang
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin: 0 29px 0 auto
+	li
+		margin: 0 20px 0 0
+		&:last-child
+			margin: 0
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 36px
+			height: 24px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+h1
+	width: 100%
+	font-size: 48px
+	font-weight: bold
+	margin: 0 0 40px
+	text-transform: uppercase
+	span
+		@include gradient-text				
+
+h2
+	width: 100%
+	font-size: 40px
+	font-weight: bold
+	text-align: center
+	span
+		@include gradient-text
+
+.w-100
+	width: 100%
+
+// header
+header
+	left: 0
+	top: 0
+	z-index: 3
+	width: 100%
+	position: fixed
+	padding: 19px 0
+	transition: .3s ease
+	.container
+		align-items: center
+	.logo
+		display: none
+
+.scroll
+	background: $header
+	.menu, .logo
+		display: flex
+
+.logo
+	max-width: 91px
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+
+.menu
+	display: none
+	align-items: center
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin: 0 0 0 48px
+	li
+		margin: 0 32px 0 0
+		&:last-child
+			margin: 0
+		a
+			color: #fff
+			font-size: 18px
+			font-weight: 500
+
+// main
+// 	height: 810px		
+
+.video-iframe
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+// .trend-strategies
+.trend-strategies
+	padding: 80px 0 70px
+	position: relative
+	background: #fff
+
+	.container
+		align-items: flex-start
+		justify-content: space-between
+		padding: 0 58px
+	&::before
+		content: ''
+		position: absolute
+		left:
+		top: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(0.48deg, #FFFFFF 2.73%, rgba(255, 255, 255, 0.21875) 30.99%, rgba(255, 255, 255, 0.441964) 45.95%, #FFFFFF 77.38%), url('../img/bg1.jpeg') no-repeat center
+			size: cover
+		opacity: 0.4
+
+
+.trend-strategies__left
+	max-width: 812px
+	width: 100%
+
+.box-text
+	line-height: 140%
+	font-size: 18px
+	p
+		margin: 0 0 30px
+		&:last-child
+			margin: 0
+
+.trend-strategies__right
+	font-size: 20px
+	text-align: center
+	max-width: 854px
+	width: 100%
+	box-shadow: 0px 2px 8px #E8EBF9
+	background: #fff
+	border-radius: 8px
+	padding: 21px 33px 21px 40px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	h3
+		margin: 0 auto 26px
+		font-weight: bold
+		font-size: 24px
+		span
+			@include gradient-text
+
+.trend-strategies__img
+	max-width: 352px
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 4px
+	overflow: hidden
+	filter: drop-shadow(0px 2px 6px rgba(26, 106, 165, 0.24))
+
+.trend-strategies__text
+	width: calc(100% - 352px)
+	padding: 0 0 0 40px
+	p
+		line-height: 140%
+
+.trend-strategies-bottom
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.video-box
+	margin: 90px auto 0
+	filter: drop-shadow(0px 16px 32px rgba(20, 56, 121, 0.24))
+	width: 100%
+	max-width: 742px
+	height: 416px
+	iframe
+		width: 100%
+		height: 100%
+
+// .mission
+.mission
+	position: relative
+	overflow: hidden
+
+	background: #fff
+
+	h2
+		margin: 0 auto 30px
+	.container
+		align-items: center
+		padding: 48px 25px 413px
+	&:before
+		content: ''
+		position: absolute
+		left: 50%
+		top: calc(100% - 116px)
+		transform: translate(-50%,0)
+		width: 1854px
+		height: 670px
+		background: url("../img/figure.svg") no-repeat center top
+			size: 100%
+
+.mission-img
+	position: absolute
+	width: 100%
+
+.mission-img1
+	left: -60px
+	max-width: 730px
+	bottom: 90px
+
+.mission-img2
+	bottom: -83px
+	left: 45%
+	transform: translate(-50%,0)
+	max-width: 692px
+
+.mission-img3
+	max-width: 972px
+	right: -150px
+	top: 50px
+
+
+strong
+	display: inline-block
+	font-weight: bold
+
+.color-green
+	color: $accent
+
+
+
+.mission-content
+	max-width: 1040px
+	width: 100%
+	margin: 0 auto
+	text-align: center
+	position: relative
+	z-index: 2
+
+
+
+// .advantages
+.advantages
+	background: url('../img/bg4.svg') no-repeat left bottom
+		size: 613px
+	position: relative
+	overflow: hidden
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		width: 1048px
+		height: 100%
+		right: 0
+		background: url('../img/men.png') no-repeat center
+			size: cover
+		z-index: 1
+	.container
+		flex-direction: column
+		align-items: flex-start
+	h2
+		max-width: 800px
+		width: 100%
+		margin: 60px auto 70px	0
+
+.svg-icon
+	display: inline-block
+	width: 100%
+	height: 100%
+	transition: .3s ease
+
+.advantages-box
+	cursor: pointer
+	transition: .3s ease
+	border:
+		radius: 6px
+	background: rgba(#ffffff, .6)
+	width: 45%
+	margin: 0 0 16px
+	padding: 20px 18px
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	font-size: 20px
+	font-weight: 500
+	color: rgba(#0C1B36, .8)
+	&:hover
+		color: $accent
+		font-weight: bold
+		box-shadow: 0px 25px 16px -10px rgba(21, 21, 21, 0.05)
+		.advantages-box__icon
+			fill: #F6B52E
+		.f-none
+			fill: none
+			stroke: $accent
+		p
+			span
+				@include gradient-text
+	p
+		max-width: 232px
+		width: 100%
+
+
+.advantages-box__icon
+	fill: $accent
+	width: 64px
+	min-width: 64px
+	height: 64px
+	margin: 0 27px 0 0
+
+.f-none
+	fill: none
+	stroke: #058F2C
+	.path-stroke
+		fill: #058F2C
+		stroke: #058F2C
+	.path-fill
+		fill: #058F2C
+		stroke: #058F2C
+
+.advantages-wrapper
+	width: 100%
+	max-width: 800px
+	margin: 0 auto 60px 0
+	display: flex
+	align-items: stretch
+	flex-wrap: wrap
+	justify-content: space-between
+
+// .partners
+.partners
+	padding: 80px 0 10px
+	h2
+		margin: 0 auto 20px
+
+
+.wrapper
+	display: flex
+	align-items: stretch
+	justify-content: space-around
+	flex-wrap: wrap
+
+.color-gold
+	width: 100%
+	color: #DFA52C
+	&:hover
+		text-decoration-line: underline
+	&:focus
+		color: #D08F06
+		text-decoration: none
+
+.partners-box
+	background: #fff
+	width: 32.5%
+	min-height: 404px
+	margin: 0 0 30px
+	padding: 32px 40px
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.02), 0 39px 23px -23px rgba(191, 191, 191, 0.32)
+	border-radius: 8px
+	border: 1px solid $accent
+	font-size: 20px
+	line-height: 140%
+	color: #0C1B36
+	a.color-gold
+		margin: 16px auto 24px
+		text-align: center
+		width: fit-content
+
+.partners-box__logo
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 104px
+	margin: 0 auto
+	img
+		max-height: 100%
+
+.partners-box-two
+	.partners-box__logo
+		margin: 0 auto 60px
+
+
+// footer
+footer
+	color: #fff
+	background: #0B481D url('../img/footer-decor.svg') no-repeat center bottom
+		size: 1143px
+	padding: 60px 0
+	font-size: 14px
+	.logo
+		max-width: 123px
+		margin: 0 60px 0 0
+	.container
+		align-items: center
+
+.mail
+	display: flex
+	align-items: center
+	color: #fff
+	font-size: 18px
+	.mail-text
+		text-decoration: underline
+	.svg-icon
+		stroke: #fff
+		fill: none
+		width: 24px
+		height: 24px
+		min-width: 24px
+		margin: 0 9px 0 0
+
+.address
+	margin: 0 0 12px
+	font-size: 18px
+	font-weight: 600
+	max-width: 251px
+	width: 100%
+
+.list-social
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	flex-wrap: wrap
+	margin: 7px 0 20px
+	li
+		margin: 0 24px 0 0
+		&:last-child
+			margin: 0
+		a
+			width: 24px
+			height: 24px
+			min-width: 24px
+			svg
+				fill: #fff
+		.links-youtube
+			width: 35px
+			min-width: 35px
+
+.footer-box-social
+	margin: 0 0 0 auto
+	text-align: right
+	p
+		margin: 0 0 7px
+
+.copyright
+	font-size: 10px
+	opacity: 0.5
+
+// modal
+.modal__div
+	position: fixed
+	max-width: 432px
+	width: 100%
+	height: 100%
+	top: 45%
+	left: 50%
+	transform: translate(-50%, -50%)
+	z-index: 101
+	overflow: auto
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	display: none
+	opacity: 0
+
+.modal__close, .close-btn
+	position: absolute
+	right: 16px
+	top: 16px
+	width: 24px
+	height: 24px
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	svg
+		stroke: $accent
+
+.modal__wrapper
+	background: #FFFFFF
+	border: none
+		radius: 8px
+	width: 100%
+	height: auto
+	margin: 50px auto
+	padding: 24px 20px 32px
+	box-sizing: border-box
+	position: relative
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16)
+	overflow: hidden
+	&::before
+		content: ''
+		position: absolute
+		opacity: 0.2
+		width: 100%
+		height: 100%
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		background: url('../img/bg5.jpeg') no-repeat center
+			size: cover
+	>*
+		position: relative
+		z-index: 1	
+	.modal__close, .close-btn
+		position: absolute	
+		z-index: 2	
+	h2
+		font-size: 30px	
+		margin: 0 auto 28px
+
+.links-green
+	width: 100%
+	text-align: center
+	color: $accent
+	font-size: 18px	
+
+.overlay
+	position: fixed
+	display: none
+	background: #000
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+	z-index: 100
+	opacity: 0.6
+
+.btn-next
+	display: flex
+	align-items: center
+	margin: 0 0 32px
+	color: #058F2C
+	font-size: 18px
+	padding: 0 0 0 12px
+	svg
+		stroke: #058F2C
+		width: 24px
+		height: 24px
+		min-width: 24px
+		margin: 0 20px 0 0	
+		fill: none
+
+#modal-password
+	max-width: 464px
+	.modal__wrapper
+		&::before
+			background: url('../img/img2.jpeg') no-repeat center
+				size: cover
+
+#modal-success
+	max-width: 560px
+	.modal__wrapper
+		&::before
+			background: url('../img/bg7.jpeg') no-repeat center
+				size: cover
+	h2
+		margin: 75px auto
+
+#modal-changed-password
+	.modal__wrapper
+		&::before
+			background: url('../img/bg6.jpeg') no-repeat center
+				size: cover
+
+.mobile-menu
+	position: fixed
+	z-index: 10
+	right: 0
+	top: 0
+	background: $header
+	padding: 35px 24px 29px 40px
+	max-width: 288px
+	width: 100%	
+	display: none	
+	.logo
+		top: 10px
+		left: 9px
+		position: absolute
+		max-width: 90px
+		width: 100%
+		margin: 0
+		display: none
+	.menu
+		width: 100%
+		flex-direction: column
+		align-items: flex-end
+		display: flex
+		margin: 0
+		li
+			margin: 0 0 23px
+			width: 100%	
+			&:last-child
+				margin: 0
+			a
+				text-align: right
+				font-size: 18px
+	.btn
+		margin: 40px 0 0 auto			
+	
+.btn-close
+	width: 32px
+	height: 32px
+	margin: 0 7px 45px auto
+	svg
+		stroke: #fff
+
+
+@import "media"
+// Всегда в конце
