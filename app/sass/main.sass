@@ -127,9 +127,12 @@ label
 	margin: 0 0 16px	
 
 .label-group
+	text-align: center
 	input
 		width: 142px
 		margin: 0 7px
+		padding: 0 5px
+		text-align: center
 
 .form
 	max-width: 368px
@@ -169,16 +172,16 @@ label
 	border-radius: 4px
 
 .btn-accent
-	background: $btn-accent
-	color: #fff
+	background: linear-gradient(180deg, #F3D576 0%, #C29A1B 100%), linear-gradient(180deg, #F0DDA2 0%, #C6A987 100%)
+	color: $header
 	&:hover
-		background: linear-gradient(180deg, #FED580 0%, #F6B52E 100%)
+		background: linear-gradient(180deg, #F3D576 0%, #C29A1B 100%), linear-gradient(180deg, #F0DDA2 0%, #C6A987 100%)
 		box-shadow: 0px 4px 8px rgba(180, 128, 19, 0.32)
-		color: #fff
+		color: $header
 	&:focus
-		background: linear-gradient(180deg, #DE9D15 0%, #FFBF3C 100%)
+		background: linear-gradient(180deg, #C29A1B 0%, #F3D576 100%), linear-gradient(180deg, #F0DDA2 0%, #C6A987 100%)
 		box-shadow: none
-		color: #fff
+		color: $header
 
 .btn-green
 	background: $accent
@@ -250,6 +253,7 @@ header
 		align-items: center
 	.logo
 		display: none
+		max-width: 100px
 
 .scroll
 	background: $header
@@ -291,9 +295,10 @@ header
 	padding: 80px 0 70px
 	position: relative
 	background: #fff
-
+	h2
+		margin: 0 0 16px
 	.container
-		align-items: flex-start
+		align-items: center
 		justify-content: space-between
 		padding: 0 58px
 	&::before
@@ -357,12 +362,17 @@ header
 		line-height: 140%
 
 .trend-strategies-bottom
+	margin: 66px auto 0
 	display: flex
 	align-items: center
 	justify-content: space-between
+	.trend-strategies__img
+		max-width: 408px
+		&:last-child
+			max-width: 428px
 
 .video-box
-	margin: 90px auto 0
+	margin: 0 auto
 	filter: drop-shadow(0px 16px 32px rgba(20, 56, 121, 0.24))
 	width: 100%
 	max-width: 742px
@@ -382,38 +392,43 @@ header
 		margin: 0 auto 30px
 	.container
 		align-items: center
-		padding: 48px 25px 413px
+		padding: 48px 25px 550px
 	&:before
 		content: ''
 		position: absolute
 		left: 50%
-		top: calc(100% - 116px)
+		top: calc(100% - 224px)
 		transform: translate(-50%,0)
 		width: 1854px
 		height: 670px
 		background: url("../img/figure.svg") no-repeat center top
-			size: 100%
+			size: contain
+	.box-text
+		font-weight: 500
 
 .mission-img
 	position: absolute
 	width: 100%
 
 .mission-img1
-	left: -60px
+	left: -42px
 	max-width: 730px
-	bottom: 90px
+	bottom: 187px
 
 .mission-img2
-	bottom: -83px
-	left: 45%
+	bottom: 24px
+	left: 44%
 	transform: translate(-50%,0)
 	max-width: 692px
 
 .mission-img3
 	max-width: 972px
-	right: -150px
-	top: 50px
+	right: -130px
+	top: 64px
+	z-index: 3
 
+.strong
+	font-weight: bold
 
 strong
 	display: inline-block
@@ -425,7 +440,7 @@ strong
 
 
 .mission-content
-	max-width: 1040px
+	max-width: 920px
 	width: 100%
 	margin: 0 auto
 	text-align: center
@@ -446,8 +461,8 @@ strong
 		bottom: 0
 		width: 1048px
 		height: 100%
-		right: 0
-		background: url('../img/men.png') no-repeat center
+		right: -160px
+		background: linear-gradient(90.94deg, #FFFFFF 3.78%, rgba(255, 255, 255, 0) 19.12%), url('../img/men.jpeg') no-repeat center
 			size: cover
 		z-index: 1
 	.container
@@ -456,7 +471,7 @@ strong
 	h2
 		max-width: 800px
 		width: 100%
-		margin: 60px auto 70px	0
+		margin: 60px auto 70px	160px
 
 .svg-icon
 	display: inline-block
@@ -516,7 +531,7 @@ strong
 .advantages-wrapper
 	width: 100%
 	max-width: 800px
-	margin: 0 auto 60px 0
+	margin: 0 auto 60px 160px
 	display: flex
 	align-items: stretch
 	flex-wrap: wrap
@@ -532,7 +547,7 @@ strong
 .wrapper
 	display: flex
 	align-items: stretch
-	justify-content: space-around
+	justify-content: space-between
 	flex-wrap: wrap
 
 .color-gold
@@ -558,12 +573,17 @@ strong
 	border-radius: 8px
 	border: 1px solid $accent
 	font-size: 20px
+	font-weight: 500
 	line-height: 140%
 	color: #0C1B36
 	a.color-gold
 		margin: 16px auto 24px
 		text-align: center
 		width: fit-content
+	&:nth-child(4)
+		margin: 0 30px 30px auto
+	&:last-child
+		margin: 0 auto 30px 30px
 
 .partners-box__logo
 	display: flex
@@ -578,16 +598,19 @@ strong
 	.partners-box__logo
 		margin: 0 auto 60px
 
+.partners-box-one
+	.partners-box__logo
+		max-width: 120px
 
 // footer
 footer
 	color: #fff
 	background: #0B481D url('../img/footer-decor.svg') no-repeat center bottom
 		size: 1143px
-	padding: 60px 0
+	padding: 40px 0
 	font-size: 14px
 	.logo
-		max-width: 123px
+		max-width: 112px
 		margin: 0 60px 0 0
 	.container
 		align-items: center

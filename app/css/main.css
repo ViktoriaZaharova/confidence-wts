@@ -123,9 +123,13 @@ label {
   display: block;
   margin: 0 0 16px; }
 
-.label-group input {
-  width: 142px;
-  margin: 0 7px; }
+.label-group {
+  text-align: center; }
+  .label-group input {
+    width: 142px;
+    margin: 0 7px;
+    padding: 0 5px;
+    text-align: center; }
 
 .form {
   max-width: 368px;
@@ -177,20 +181,21 @@ label {
   border-radius: 4px; }
 
 .btn-accent {
-  background: #F6B52E;
-  color: #fff; }
+  background: -webkit-gradient(linear, left top, left bottom, from(#F3D576), to(#C29A1B)), -webkit-gradient(linear, left top, left bottom, from(#F0DDA2), to(#C6A987));
+  background: linear-gradient(180deg, #F3D576 0%, #C29A1B 100%), linear-gradient(180deg, #F0DDA2 0%, #C6A987 100%);
+  color: #0B481D; }
   .btn-accent:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#FED580), to(#F6B52E));
-    background: linear-gradient(180deg, #FED580 0%, #F6B52E 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#F3D576), to(#C29A1B)), -webkit-gradient(linear, left top, left bottom, from(#F0DDA2), to(#C6A987));
+    background: linear-gradient(180deg, #F3D576 0%, #C29A1B 100%), linear-gradient(180deg, #F0DDA2 0%, #C6A987 100%);
     -webkit-box-shadow: 0px 4px 8px rgba(180, 128, 19, 0.32);
             box-shadow: 0px 4px 8px rgba(180, 128, 19, 0.32);
-    color: #fff; }
+    color: #0B481D; }
   .btn-accent:focus {
-    background: -webkit-gradient(linear, left top, left bottom, from(#DE9D15), to(#FFBF3C));
-    background: linear-gradient(180deg, #DE9D15 0%, #FFBF3C 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#C29A1B), to(#F3D576)), -webkit-gradient(linear, left top, left bottom, from(#F0DDA2), to(#C6A987));
+    background: linear-gradient(180deg, #C29A1B 0%, #F3D576 100%), linear-gradient(180deg, #F0DDA2 0%, #C6A987 100%);
     -webkit-box-shadow: none;
             box-shadow: none;
-    color: #fff; }
+    color: #0B481D; }
 
 .btn-green {
   background: #058F2C;
@@ -285,7 +290,8 @@ header {
         -ms-flex-align: center;
             align-items: center; }
   header .logo {
-    display: none; }
+    display: none;
+    max-width: 100px; }
 
 .scroll {
   background: #0B481D; }
@@ -337,10 +343,12 @@ header {
   padding: 80px 0 70px;
   position: relative;
   background: #fff; }
+  .trend-strategies h2 {
+    margin: 0 0 16px; }
   .trend-strategies .container {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -422,6 +430,7 @@ header {
     line-height: 140%; }
 
 .trend-strategies-bottom {
+  margin: 66px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,9 +440,13 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .trend-strategies-bottom .trend-strategies__img {
+    max-width: 408px; }
+    .trend-strategies-bottom .trend-strategies__img:last-child {
+      max-width: 428px; }
 
 .video-box {
-  margin: 90px auto 0;
+  margin: 0 auto;
   -webkit-filter: drop-shadow(0px 16px 32px rgba(20, 56, 121, 0.24));
           filter: drop-shadow(0px 16px 32px rgba(20, 56, 121, 0.24));
   width: 100%;
@@ -453,39 +466,45 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 48px 25px 413px; }
+    padding: 48px 25px 550px; }
   .mission:before {
     content: '';
     position: absolute;
     left: 50%;
-    top: calc(100% - 116px);
+    top: calc(100% - 224px);
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     width: 1854px;
     height: 670px;
     background: url("../img/figure.svg") no-repeat center top;
-      background-size: 100%; }
+      background-size: contain; }
+  .mission .box-text {
+    font-weight: 500; }
 
 .mission-img {
   position: absolute;
   width: 100%; }
 
 .mission-img1 {
-  left: -60px;
+  left: -42px;
   max-width: 730px;
-  bottom: 90px; }
+  bottom: 187px; }
 
 .mission-img2 {
-  bottom: -83px;
-  left: 45%;
+  bottom: 24px;
+  left: 44%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   max-width: 692px; }
 
 .mission-img3 {
   max-width: 972px;
-  right: -150px;
-  top: 50px; }
+  right: -130px;
+  top: 64px;
+  z-index: 3; }
+
+.strong {
+  font-weight: bold; }
 
 strong {
   display: inline-block;
@@ -495,7 +514,7 @@ strong {
   color: #058F2C; }
 
 .mission-content {
-  max-width: 1040px;
+  max-width: 920px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -513,8 +532,8 @@ strong {
     bottom: 0;
     width: 1048px;
     height: 100%;
-    right: 0;
-    background: url("../img/men.png") no-repeat center;
+    right: -160px;
+    background: linear-gradient(90.94deg, #FFFFFF 3.78%, rgba(255, 255, 255, 0) 19.12%), url("../img/men.jpeg") no-repeat center;
       background-size: cover;
     z-index: 1; }
   .advantages .container {
@@ -528,7 +547,7 @@ strong {
   .advantages h2 {
     max-width: 800px;
     width: 100%;
-    margin: 60px auto 70px	0; }
+    margin: 60px auto 70px	160px; }
 
 .svg-icon {
   display: inline-block;
@@ -597,7 +616,7 @@ strong {
 .advantages-wrapper {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto 60px 0;
+  margin: 0 auto 60px 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -622,8 +641,9 @@ strong {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
@@ -659,6 +679,7 @@ strong {
   border-radius: 8px;
   border: 1px solid #058F2C;
   font-size: 20px;
+  font-weight: 500;
   line-height: 140%;
   color: #0C1B36; }
   .partners-box a.color-gold {
@@ -667,6 +688,10 @@ strong {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content; }
+  .partners-box:nth-child(4) {
+    margin: 0 30px 30px auto; }
+  .partners-box:last-child {
+    margin: 0 auto 30px 30px; }
 
 .partners-box__logo {
   display: -webkit-box;
@@ -686,14 +711,17 @@ strong {
 .partners-box-two .partners-box__logo {
   margin: 0 auto 60px; }
 
+.partners-box-one .partners-box__logo {
+  max-width: 120px; }
+
 footer {
   color: #fff;
   background: #0B481D url("../img/footer-decor.svg") no-repeat center bottom;
     background-size: 1143px;
-  padding: 60px 0;
+  padding: 40px 0;
   font-size: 14px; }
   footer .logo {
-    max-width: 123px;
+    max-width: 112px;
     margin: 0 60px 0 0; }
   footer .container {
     -webkit-box-align: center;
@@ -951,17 +979,23 @@ footer {
   .trend-strategies .container, .advantages .container {
     padding: 0 20px; }
   .trend-strategies__left {
-    max-width: 612px; }
+    max-width: 730px; }
   .trend-strategies__right {
-    max-width: 754px; } }
+    max-width: 778px; }
+  h1 {
+    font-size: 40px; } }
 
 @media only screen and (max-width: 1580px) {
+  .mission .container {
+    padding: 48px 25px 300px; }
   .mission-img1 {
     max-width: 520px;
-    left: -25px; }
+    left: -25px;
+    bottom: 100px; }
   .mission-img2 {
     max-width: 475px;
-    bottom: 17px; }
+    bottom: 17px;
+    left: 50%; }
   .mission-img3 {
     max-width: 627px;
     right: -110px;
@@ -970,16 +1004,27 @@ footer {
   .mission:before {
     top: calc(100% - 119px);
     height: 358px;
-    width: 992px; } }
+    width: 992px; }
+  .trend-strategies__left {
+    max-width: 680px; }
+  .trend-strategies__right {
+    max-width: 748px; }
+  .trend-strategies__img {
+    max-width: 310px; }
+  .trend-strategies__text {
+    width: calc(100% - 310px); }
+  .advantages-wrapper {
+    margin: 0 auto 60px 0; }
+  .advantages h2 {
+    margin: 60px auto 70px	0; } }
 
 @media only screen and (max-width: 1500px) {
   h1 {
-    font-size: 40px; }
+    font-size: 34px; }
   .trend-strategies__left {
     max-width: 612px; }
   .advantages::before {
-    width: 798px;
-    right: -140px; }
+    width: 798px; }
   .advantages {
     background-size: 613px; }
     .advantages h2 {
@@ -994,7 +1039,15 @@ footer {
     height: 48px;
     min-width: 48px; }
   .advantages-wrapper {
-    max-width: 700px; } }
+    max-width: 700px; }
+  .trend-strategies__img {
+    max-width: 280px; }
+  .trend-strategies__text {
+    width: calc(100% - 280px); }
+  .trend-strategies-bottom .trend-strategies__img {
+    max-width: 320px; }
+    .trend-strategies-bottom .trend-strategies__img:last-child {
+      max-width: 360px; } }
 
 @media only screen and (max-width: 1400px) {
   .menu {
@@ -1009,8 +1062,7 @@ footer {
     margin: 0 auto; }
   h1 {
     text-align: center;
-    margin: 0 auto 14px;
-    text-transform: none; }
+    margin: 0 auto 14px; }
   .trend-strategies {
     padding: 45px 0 29px; }
     .trend-strategies .box-text p {
@@ -1038,7 +1090,9 @@ footer {
   .mission .container {
     padding: 19px 40px 329px; }
   footer {
-    background-size: 490px; } }
+    background-size: 490px; }
+  .trend-strategies-bottom {
+    margin: 0; } }
 
 @media only screen and (max-width: 1200px) {
   main {
@@ -1059,6 +1113,8 @@ footer {
     margin: 27px auto 71px; } }
 
 @media only screen and (max-width: 1100px) {
+  .mission-img2 {
+    left: 47%; }
   .container {
     padding: 0 30px; }
   .scroll .menu {
@@ -1086,7 +1142,7 @@ footer {
     max-width: 540px;
     margin: 0 0 30px; }
   .advantages:before {
-    width: 630px; }
+    right: -231px; }
   .partners {
     padding: 33px 0 13px; }
   .partners-box {
@@ -1168,7 +1224,8 @@ footer {
   .mission-img1 {
     max-width: 380px; }
   .mission-img2 {
-    max-width: 280px; }
+    max-width: 280px;
+    left: 49%; }
   .mission-img3 {
     max-width: 440px; } }
 
@@ -1177,7 +1234,10 @@ footer {
     width: 100%;
     border: 1px solid #058F2C;
     padding: 16px;
-    text-align: left; }
+    text-align: center;
+    font-weight: 500; }
+    .advantages-box p {
+      margin: 0 auto; }
   .advantages {
     background: #fff;
     position: relative;

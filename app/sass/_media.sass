@@ -8,18 +8,27 @@
 		padding: 0 20px
 
 	.trend-strategies__left
-		max-width: 612px
+		max-width: 730px
 
 	.trend-strategies__right
-		max-width: 754px
+		max-width: 778px
+
+	h1
+		font-size: 40px
+
 @media only screen and (max-width : 1580px)
+	.mission .container
+		padding: 48px 25px 300px
+
 	.mission-img1
 		max-width: 520px
 		left: -25px
+		bottom: 100px
 
 	.mission-img2
 		max-width: 475px
 		bottom: 17px
+		left: 50%
 
 	.mission-img3
 		max-width: 627px
@@ -32,17 +41,34 @@
 		height: 358px
 		width: 992px
 
+	.trend-strategies__left
+		max-width: 680px
+
+	.trend-strategies__right
+		max-width: 748px
+
+	.trend-strategies__img
+		max-width: 310px
+
+	.trend-strategies__text
+		width: calc(100% - 310px)
+
+
+	.advantages-wrapper
+		margin: 0 auto 60px 0
+
+	.advantages h2
+		margin: 60px auto 70px	0
 
 @media only screen and (max-width : 1500px)
 	h1
-		font-size: 40px	
+		font-size: 34px
 
 	.trend-strategies__left
 		max-width: 612px	
 
 	.advantages::before
 		width: 798px
-		right: -140px
 
 	.advantages
 		background-size: 613px
@@ -63,6 +89,17 @@
 	.advantages-wrapper
 		max-width: 700px
 
+	.trend-strategies__img
+		max-width: 280px
+
+	.trend-strategies__text
+		width: calc(100% - 280px)
+
+	.trend-strategies-bottom
+		.trend-strategies__img
+			max-width: 320px
+			&:last-child
+				max-width: 360px
 
 @media only screen and (max-width : 1400px)
 	.menu
@@ -72,6 +109,7 @@
 			a
 				font-size: 16px
 
+
 	.trend-strategies__left
 		max-width: 976px
 		text-align: center
@@ -80,7 +118,6 @@
 	h1
 		text-align: center
 		margin: 0 auto 14px
-		text-transform: none
 
 	.trend-strategies
 		padding: 45px 0 29px
@@ -122,7 +159,8 @@
 		-webkit-background-size: 490px
 		background-size: 490px
 
-
+	.trend-strategies-bottom
+		margin: 0
 
 @media only screen and (max-width : 1200px)
 	main
@@ -151,6 +189,9 @@
 		margin: 27px auto 71px
 
 @media only screen and (max-width : 1100px)
+	.mission-img2
+		left: 47%
+
 	.container
 		padding: 0 30px
 
@@ -186,7 +227,7 @@
 
 	.advantages
 		&:before
-			width: 630px
+			right: -231px
 
 	.partners
 		padding: 33px 0 13px
@@ -275,6 +316,7 @@
 
 	.mission-img2
 		max-width: 280px
+		left: 49%
 
 	.mission-img3
 		max-width: 440px
@@ -284,8 +326,10 @@
 		width: 100%
 		border: 1px solid $accent
 		padding: 16px
-		text-align: left
-
+		text-align: center
+		font-weight: 500
+		p
+			margin: 0 auto
 
 	.advantages
 		background: #fff
